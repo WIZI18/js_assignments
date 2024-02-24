@@ -1,0 +1,11 @@
+h1{
+    font-size: 32px;
+    color: rgb(50, 203, 50);
+    text-decoration: underline;
+    text-align: center;
+    text-shadow: 5px 5px 5px rgba(76, 235, 76, 0.5);
+}
+ul > li{
+    margin: 5px 5px;
+    padding: 2px 2px;
+}
