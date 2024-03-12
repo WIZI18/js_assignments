@@ -24,8 +24,8 @@ if (choice == 1) {
  else if(choice == 3){
     var a
     var b
-    a = prompt("Enter first Number.")
-    b = prompt("Enter second Number,")
+    a = +prompt("Enter first Number.")
+    b = +prompt("Enter second Number.")
     if (a > b) {
         document.write(`Q ${choice}: ${a} is greater than ${b}.`)
     } else if(b > a){
@@ -38,23 +38,29 @@ if (choice == 1) {
  else if(choice == 4){
     var a
     var b
-    a = prompt("Enter first Number.")
-    b = prompt("Enter second Number,")
-    if (a < b) {
-        document.write(`Q ${choice}: ${a} is smaller than ${b}.`)
-    } else if(b < a){
-        document.write(`Q ${choice}: ${b} is smaller than ${a}.`)
+    var c
+    a = +prompt("Enter first Number.")
+    b = +prompt("Enter second Number.")
+    c = +prompt("Enter third Number.")
+    if (a < b && a < c) {
+        document.write(`Q ${choice}: ${a} is smaller than ${b} and ${c}.`)
+    } else if(b < a && b < c){
+        document.write(`Q ${choice}: ${b} is smaller than ${a} and ${c}.`)
     }
-    else{
-        document.write(`Q ${choice}: You entered both numbers ZERO.`)
+    else if(c < b && c < a){
+        document.write(`Q ${choice}: ${c} is smaller than ${a} and ${b}.`)
+    }
+    else if(a == 0 && b == 0 && c == 0){
+        document.write(`Q ${choice}: You entered ALL ZEROs.`)
     }
 }
  else if(choice == 5){
     var a = +prompt("Enter a number to find its factorial.")
-    for(var i = a - 1;i > 0;i--){
-        a = a * i
+    var b = a
+    for(var i = b - 1;i > 0;i--){
+        b = b * i
     }   
-    document.write(`Q ${choice}: Factorial is: ${a}.`)
+    document.write(`Q ${choice}: Factorial of ${a} is: ${b}.`)
 }
  else if(choice == 6){
     var a, b, c
